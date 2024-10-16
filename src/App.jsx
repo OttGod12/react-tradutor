@@ -1,4 +1,4 @@
-
+import { useState } from 'react';
 
 function App() {
   const languages = [
@@ -9,6 +9,12 @@ function App() {
     { code: "it", name: "Italiano" },
     { code: "pt-br", name: "Português" },
   ];
+
+  const [lingua1, setLingua1] = useState("Português");
+  const [lingua2, setlingua2] = useState("Inglês");
+
+
+
 
   let isLoading = false
   let error = ""
@@ -26,10 +32,14 @@ function App() {
           <div className="flex items-center justify-between p-4 border-b border-gray-200">
             <select
               className="text-sm text-textColor bg-transparent border-none focus:outline-none cursor-pointer"
-              value="en-us"
+              value={lingua1}
             >
-              <option value="pt-br">Português</option>
+              <option value="de">Alemão</option>
+              <option value="es">Espanhol</option>
+              <option value="fr">Francês</option>
               <option value="en-us">Inglês</option>
+              <option value="it">Italiano</option>
+              <option value="pt-br">Português</option>
             </select>
 
             <button className="p-2 rounded-full hover:bg-gray-100 outline-none">
@@ -39,6 +49,7 @@ function App() {
                 stroke="currentColor"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
+                
               >
                 <path
                   strokeLinecap="round"
@@ -51,10 +62,15 @@ function App() {
 
             <select
               className="text-sm text-textColor bg-transparent border-none focus:outline-none cursor-pointer"
-              value="pt-br"
+              value= {lingua2}
             >
-              <option value="pt-br">Português</option>
+              <option value="de">Alemão</option>
+              <option value="es">Espanhol</option>
+              <option value="fr">Francês</option>
               <option value="en-us">Inglês</option>
+              <option value="it">Italiano</option>
+              <option value="pt-br">Português</option>
+              
             </select>
           </div>
 
